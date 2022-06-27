@@ -88,4 +88,5 @@ for epoch in range(num_epochs):
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
         torch.save(state, './checkpoint/ckpt' + names + '.t7')
+        torch.save(snn, './checkpoint/model_' + names + '.t7')
         best_acc = acc
