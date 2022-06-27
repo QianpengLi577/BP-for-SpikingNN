@@ -60,7 +60,7 @@ class SCNN(nn.Module):
             x = input > torch.rand(input.size(), device=device) # prob. firing
             x = x.view(batch_size, -1)
 
-            h1_mem, h1_spike = mem_update(self.fc1, x, h1_mem, h1_spike)
+            h1_mem, h1_spike = mem_update(self.fc1, x.float(), h1_mem, h1_spike)
             h1_sumspike += h1_spike
 
 

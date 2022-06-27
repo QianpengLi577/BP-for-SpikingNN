@@ -13,9 +13,9 @@ import torchvision
 import torchvision.transforms as transforms
 import os
 import time
-from spiking_model import*
+from model_snn import*
 # os.environ['CUDA_VISIBLE_DEVICES'] = "3"
-names = 'spiking_model'
+names = 'model_snn'
 data_path =  './raw/' #todo: input your data path
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 train_dataset = torchvision.datasets.MNIST(root= data_path, train=True, download=True, transform=transforms.ToTensor())
